@@ -1,0 +1,18 @@
+{
+  "id": "%GROUP%",
+  "title": "%Name%",
+  "description": "A simple module which adds a user specific to do list.",
+  "version": "#{VERSION}#",
+  "authors": [
+    {
+      "name": "You!"
+    }
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "minimumCoreVersion": "0.8.8",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
+}

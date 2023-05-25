@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Foundry Server Admin Page</title>
+    </head>
+    <body>
+        <h1>Admin Page</h1>
+        <button type="button" onclick="restart()">restart</button>
+    </body>
+    <script type="application/javascript">
+        const restart = () => {
+            fetch('/restart', {
+                method: 'POST',
+            })
+        }
+    </script>
+</html>

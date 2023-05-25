@@ -1,0 +1,1 @@
+console.log('Hello World for a Foundry VTT module!');
