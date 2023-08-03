@@ -1,4 +1,4 @@
-ARG FOUNDRY_VERSION=release
+ARG FOUNDRY_VERSION=develop
 
 FROM felddy/foundryvtt:${FOUNDRY_VERSION}
 

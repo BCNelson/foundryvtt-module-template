@@ -10,14 +10,9 @@ SAFE_ACTOR=$(echo $ACTOR | sed 's/[^a-zA-Z0-9]//g' | tr '[:upper:]' '[:lower:]')
 GROUP="com.github.$SAFE_ACTOR.$SAFE_NAME"
 
 # Replace placeholders in the template-cleanup files
-sed -i "s/%NAME%/$NAME/g" ./*
-sed -i "s/%REPOSITORY%/${GITHUB_REPOSITORY/\//\\/}/g" ./*
-sed -i "s/%GROUP%/$GROUP/g" ./*
-
-# Replace template package name in project files with $GROUP
-find src -type f -exec sed -i "s/org.jetbrains.plugins.template/$GROUP/g" {} +
-find src -type f -exec sed -i "s/IntelliJ Platform Plugin/$NAME/g" {} +
-find src -type f -exec sed -i "s/JetBrains/$ACTOR/g" {} +
+sed -i "s/%NAME%/$NAME/g" ./.github/template-cleanup/*
+sed -i "s/%REPOSITORY%/${GITHUB_REPOSITORY/\//\\/}/g" ./.github/template-cleanup/*
+sed -i "s/%GROUP%/$GROUP/g" ./.github/template-cleanup/*
 
 # Move content
 cp -R .github/template-cleanup/* .
